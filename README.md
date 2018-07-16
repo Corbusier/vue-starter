@@ -22,6 +22,7 @@ npm run build
 
 ### 请求数据
 该项目运用了在线模拟的REST API服务器──[jsonplaceholder](http://jsonplaceholder.typicode.com/)
+
 首先在webpack的配置中修改代理项:
 ```js
     '/replace': {
@@ -38,7 +39,7 @@ npm run build
         }
     }
 ```
-并且将不同的请求接口放在单独的模块中封装起来(`services/jsonholder.js`)，当首页内容完成创建时(created)使用`action`异步请求封装接口获取数据，再分发提交载荷到`mutation`中，储存获取到的数据，最后经过`getters`返回数据。这是一个完整的vuex状态管理运行机制。在之前写过[vuex-cart 介绍](https://corbusier.github.io/2018/04/18/vuex-cart/)。
+并且将不同的请求接口放在单独的模块中封装起来(`services/jsonholder.js`)，当首页内容完成创建时(`created`)使用`action`异步请求封装接口获取数据，再分发提交载荷到`mutation`中，储存获取到的数据，最后经过`getters`返回数据。这是一个完整的vuex状态管理运行机制。在之前写过[vuex-cart 介绍](https://corbusier.github.io/2018/04/18/vuex-cart/)。
 
 在获取数据时，使用计算属性得到vuex保存的数据。同时，异步提交修改加载动画的状态。注意，此处`dispatch('doSpinner', showSpinner, { root: true })` 中的第三个参数申明了调用的不是本模块的`action`。
 
