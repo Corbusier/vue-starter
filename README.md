@@ -1,4 +1,4 @@
-# vue-assistant
+# vue-starter
 
 > demo为vue2.5 + vuex + vue-router构建的移动端单页面应用。
 
@@ -15,7 +15,7 @@ npm run dev
 npm run build
 ```
 
-## introduction
+## Introduction
 本项目涉及到vue模块的全局和局部应用配置、第三方UI组件的使用、vuex模块、vue-router编程式的导航，路由子路由配置，路由信息对象等。
 
 项目由十几个页面构成，主要分为主页、相册、用户中心三部分。主页内容包含评论、可编辑的标题及正文。相册内容包含预加载的标题及对应图像。用户中心内容包含用户信息及更多内容，更多内容部分又有子路由内容，包含用户的任务、动态、相册等内容。
@@ -88,8 +88,8 @@ npm run build
 	}
 ```
 
-
-
+## Preview
+(在线预览请点击)[http://111.231.228.147:8001] 
 
 
 
